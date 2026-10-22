@@ -1,12 +1,14 @@
 # ewt — Enshrouded World Tool
 
-Reset every area outside your Flame Altar **on the next world load** — no 30-minute idle wait.
+Reset every area outside your Flame Altar **on the next world load** — no waiting for the game's chunk timer.
 
 *Türkçe: [README.tr.md](README.tr.md)*
 
 ## Why
 
 Enshrouded only keeps what is inside a Flame Altar's radius. Everything else lives in one save section, `chunk_persistent_data`, which the engine prunes over time — that is the "world reset" players notice. `ewt` removes that section from a world save, so terraforming, looted chests and POI state outside your bases are regenerated on the next load. Base sections (`baseNN`) are copied byte-for-byte.
+
+The engine's timer is per chunk and has changed between versions. In 1.0 players report roughly **2 hours / 3 in-game days** of chunk inactivity (the official wiki still quotes 30 minutes from Early Access patch 0.7.0.1). `ewt` does not depend on that value — it applies the reset immediately.
 
 ## Requirements
 

@@ -1,12 +1,14 @@
 # ewt — Enshrouded Dünya Aracı
 
-Flame Altar dışındaki her alanı **bir sonraki dünya yüklemesinde** sıfırla — 30 dakikalık bekleme yok.
+Flame Altar dışındaki her alanı **bir sonraki dünya yüklemesinde** sıfırla — oyunun chunk zamanlayıcısını beklemek yok.
 
 *English: [README.md](README.md)*
 
 ## Neden
 
 Enshrouded yalnızca Flame Altar yarıçapı içindekini kalıcı tutar. Geri kalan her şey tek bir kayıt bölümünde, `chunk_persistent_data` içinde durur ve motor bunu zamanla budar — oyuncuların "dünya sıfırlandı" dediği şey budur. `ewt` bu bölümü dünya kaydından düşürür; böylece altar dışındaki terraform, açılmış sandıklar ve POI durumu bir sonraki yüklemede yeniden üretilir. Base bölümleri (`baseNN`) baytına kadar kopyalanır.
+
+Motorun zamanlayıcısı chunk bazlıdır ve sürümler arasında değişti. 1.0'da oyuncu gözlemleri **~2 saat / 3 oyun günü** chunk hareketsizliği diyor (resmî wiki hâlâ Erken Erişim 0.7.0.1'deki 30 dakikayı yazıyor). `ewt` bu değere bağlı değil — sıfırlamayı anında uygular.
 
 ## Gereksinimler
 
