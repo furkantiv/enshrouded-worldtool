@@ -1,0 +1,26 @@
+{
+  "name": "enshrouded-worldtool",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Reset Enshrouded world areas outside Flame Altar bases by dropping the chunk_persistent_data save section.",
+  "license": "MIT",
+  "author": "Furkan",
+  "keywords": [
+    "enshrouded",
+    "save-editor",
+    "world-reset",
+    "flame-altar",
+    "ksd"
+  ],
+  "bin": {
+    "ewt": "./ewt.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node ewt.mjs",
+    "check": "node --check ewt.mjs"
+  }
+}

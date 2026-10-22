@@ -1,0 +1,19 @@
+# local UI preference (created when you switch language)
+ewt.config.json
+
+# backups / temp files
+*.bak
+*.bak.json
+_pre-restore/
+_ewt-tmp
+*.ewt-tmp
+
+# node
+node_modules/
+npm-debug.log*
+
+# editors / os
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini

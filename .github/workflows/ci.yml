@@ -1,0 +1,31 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  syntax:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        node: [20, 22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Syntax check
+        shell: pwsh
+        run: |
+          Get-ChildItem -Recurse -Filter *.mjs | ForEach-Object {
+            node --check $_.FullName
+            if ($LASTEXITCODE -ne 0) { throw "syntax error in $($_.Name)" }
+          }
+      - name: Help runs
+        run: node ewt.mjs --help
+      - name: Command surface
+        run: |
+          node ewt.mjs list
+          node ewt.mjs where
