@@ -19,6 +19,13 @@
   "engines": {
     "node": ">=20"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/furkantiv/enshrouded-worldtool.git"
+  },
+  "bugs": {
+    "url": "https://github.com/furkantiv/enshrouded-worldtool/issues"
+  },
   "scripts": {
     "start": "node ewt.mjs",
     "check": "node --check ewt.mjs"

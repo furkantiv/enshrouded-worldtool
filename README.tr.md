@@ -17,7 +17,7 @@ Enshrouded yalnızca Flame Altar yarıçapı içindekini kalıcı tutar. Geri ka
 ## Kurulum
 
 ```bat
-git clone https://github.com/USER/enshrouded-worldtool.git
+git clone https://github.com/furkantiv/enshrouded-worldtool.git
 cd enshrouded-worldtool
 ewt
 ```
