@@ -83,6 +83,8 @@ Dünya kaydı, isimli bölümlerden oluşan bir `SV2C` konteyneridir: `baseNN` (
 
 Bu geçerli bir durumdur: base dışında hiç düzenleme yapılmamış dünyalar bu bölüm olmadan gelir.
 
+Arka plan notları, format ayrıntıları ve ilk ölçümler: [`.opencode/`](.opencode/).
+
 ## Sınırlar
 
 - Bölümün tamamı düşürülür. Chunk bazında cerrahi silme uygulanmadı (bölümün iç checksum'ı çözülmedi).

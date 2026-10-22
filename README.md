@@ -83,6 +83,8 @@ A world save is an `SV2C` container made of named sections: `baseNN` (Flame Alta
 
 This is a valid state: worlds that never had edits outside a base come without that section at all.
 
+Background notes, format details and the original measurements: [`.opencode/`](.opencode/).
+
 ## Limitations
 
 - The whole section is dropped. Surgical per-chunk removal is not implemented (the section's internal checksum is not reverse-engineered).
